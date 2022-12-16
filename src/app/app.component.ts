@@ -23,7 +23,8 @@ export class AppComponent implements OnInit {
             throw new Error('ZERO was found!!');
           }
           return item
-        })
+        }),
+        take(3)
       ).subscribe({
         next: (item) => console.log(`resulting item .. ${item}`),
         error: (err) => console.error(`error occured ${err}`),
